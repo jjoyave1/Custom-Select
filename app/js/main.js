@@ -1,9 +1,12 @@
+// set initial variable value
+var init_val, val;
+
 // $('.select-menu li').hide();
 $('.select-menu li[selected]').show();
 
 // event listeners
 $('.select-menu').on('click', function (e) {
-  var init_val = e.target.attributes[0].textContent;
+  init_val = e.target.attributes[0].textContent;
 
   e.preventDefault();
   e.stopPropagation();
@@ -12,7 +15,7 @@ $('.select-menu').on('click', function (e) {
 
   $(document).on('click', function(ev) {
     ev.preventDefault();
-    $('.select-menu-dropdown').fadeOut(400);
+    $('.select-menu-dropdown').fadeOut();
   });
 
   $('.select-menu-dropdown').on('click', function (ev) {
@@ -26,9 +29,7 @@ $('.select-menu').on('click', function (e) {
 
     ev.preventDefault();
 
-    var val = ev.target.attributes[0].textContent;
-
-    console.log(val, init_val); ///stacking for some reason
+    val = ev.target.attributes[0].textContent;
 
     if (val !== init_val) {
 
@@ -38,7 +39,7 @@ $('.select-menu').on('click', function (e) {
       $('.select-menu li').hide();
       $('.select-menu li[selected]').show();
 
-      $('.select-menu-dropdown').fadeOut(400);
+      $('.select-menu-dropdown').fadeOut(200);
 
     }
   });
@@ -47,5 +48,6 @@ $('.select-menu').on('click', function (e) {
 });
 
 $('.select-menu').on('change', function (e) {
-  console.log('changes');
+  e.preventDefault();
+  e.stopPropagation();
 });

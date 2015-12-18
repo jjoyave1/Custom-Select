@@ -4,7 +4,7 @@
 .select-menu {
   list-style: none;
   border: solid 1px #000;
-  width: 80px;
+  width: 120px;
   margin-left: 14px;
   padding: 0;
   height: 20px;
@@ -13,14 +13,15 @@
     margin: 0;
     padding: 0;
     height: 20px;
-    text-align: center;
+    text-align: left;
+    padding-left: 12px;
     display: none; }
 
 .select-menu-dropdown {
   position: absolute;
   top: 0px;
   left: 13px;
-  width: 82px;
+  width: 122px;
   list-style: none;
   border: solid 1px #555;
   padding: 0;
@@ -30,8 +31,9 @@
   .select-menu-dropdown li {
     margin: 0;
     padding: 0;
+    padding-left: 12px;
     height: 20px;
-    text-align: center;
+    text-align: left;
     cursor: default; }
   .select-menu-dropdown li:hover {
     background-color: #02599E; }
