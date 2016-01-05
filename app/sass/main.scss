@@ -17,33 +17,43 @@
     padding: 0;
     height: 20px;
     text-align: left;
-    padding-left: 12px;
+    padding-left: 9px;
     display: none;
   }
-}
 
-.select-menu-dropdown {
-  position: absolute;
-  top: 0px;
-  left: 13px;
-  width: 122px;
-  list-style: none;
-  border: solid 1px #555;
-  padding: 0;
-  background-color: #EEE;
-  display: none;
-  border-radius: 2px;
-
-  li {
-    margin: 0;
-    padding: 0;
-    padding-left: 12px;
-    height: 20px;
-    text-align: left;
-    cursor: default;
+  li[selected="selected"] {
+    position: relative;
   }
 
-  li:hover {
-    background-color: #02599E;
+  li[selected="selected"]::after {
+    content: '▾';
+    position: absolute;
+    left: 100px;
   }
 }
+
+// .select-menu-dropdown {
+//   position: absolute;
+//   top: 0px;
+//   left: 13px;
+//   width: 122px;
+//   list-style: none;
+//   border: solid 1px #555;
+//   padding: 0;
+//   background-color: #EEE;
+//   display: none;
+//   border-radius: 2px;
+
+  // li {
+  //   margin: 0;
+  //   padding: 0;
+  //   padding-left: 9px;
+  //   height: 20px;
+  //   text-align: left;
+  //   cursor: default;
+  // }
+
+  // li:hover {
+  //   background-color: #02599E;
+  // }
+// }
